@@ -11,6 +11,9 @@
   },
   "keywords": [],
   "author": "",
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
