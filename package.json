@@ -1,0 +1,29 @@
+{
+  "name": "@ugrik-r/ui-kit-components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/esm/index.js",
+  "module": "dist/cjs/index.js",
+  "scripts": {
+    "build-patch": "rm -rf ./dist & rollup -c --bundleConfigAsCjs",
+    "build-minor": "rm -rf ./dist & npm version minor & rollup -c --bundleConfigAsCjs",
+    "build-major": "rm -rf ./dist & npm version major & rollup -c --bundleConfigAsCjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/react": "^18.2.53",
+    "@types/styled-components": "^5.1.34",
+    "react": "^18.2.0",
+    "rollup": "^4.9.6",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "styled-components": "^6.1.8",
+    "typescript": "^5.3.3"
+  }
+}
