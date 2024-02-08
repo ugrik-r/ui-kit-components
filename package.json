@@ -15,6 +15,14 @@
   },
   "keywords": [],
   "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ugrik-r/ui-kit-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ugrik-r/ui-kit-components/issues"
+  },
+  "homepage": "https://github.com/ugrik-r/ui-kit-components#readme",
   "publishConfig": {
     "access": "public"
   },
