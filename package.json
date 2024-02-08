@@ -11,7 +11,8 @@
   "scripts": {
     "build-patch": "rm -rf ./dist & npm version patch & rollup -c --bundleConfigAsCjs & npm publish",
     "build-minor": "rm -rf ./dist & npm version minor & rollup -c --bundleConfigAsCjs & npm publish",
-    "build-major": "rm -rf ./dist & npm version major & rollup -c --bundleConfigAsCjs & npm publish"
+    "build-major": "rm -rf ./dist & npm version major & rollup -c --bundleConfigAsCjs & npm publish",
+    "build": "rm -rf ./dist & rollup -c --bundleConfigAsCjs"
   },
   "keywords": [],
   "author": "",
