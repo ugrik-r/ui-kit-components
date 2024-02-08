@@ -1,9 +1,13 @@
 {
   "name": "@ugrik-r/ui-kit-components",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/esm/index.js",
   "module": "dist/cjs/index.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "types": "dist/index.d.ts",
   "scripts": {
     "build-patch": "rm -rf ./dist & npm version patch & rollup -c --bundleConfigAsCjs & npm publish",
     "build-minor": "rm -rf ./dist & npm version minor & rollup -c --bundleConfigAsCjs & npm publish",
