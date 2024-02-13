@@ -1,0 +1,70 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "overrides": [
+    {
+      "files": [
+        "*.ts, *.tsx"
+      ],
+      "parserOptions": {
+        "project": [
+          "**/tsconfig.json"
+        ]
+      }
+    }
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:json/recommended-with-comments",
+    "plugin:storybook/recommended"
+  ],
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "env": {
+    "node": true,
+    "browser": true,
+    "es2020": true
+  },
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "react/no-unknown-property": [
+      "error",
+      {
+        "ignore": [
+          "css"
+        ]
+      }
+    ],
+    "no-console": [
+      "warn",
+      {
+        "allow": [
+          "warn",
+          "error",
+          "info"
+        ]
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "args": "none",
+        "ignoreRestSiblings": true
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-empty-interface": "off"
+  }
+}
