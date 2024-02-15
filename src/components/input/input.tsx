@@ -5,5 +5,12 @@ import { inputStyles } from "./input.styles";
 export type InputProps = TextFieldProps;
 
 export const Input = ({ ...props }: InputProps) => {
-  return <TextField css={inputStyles.input} size="small" {...props} />;
+  return (
+    <TextField
+      css={inputStyles.input}
+      size="small"
+      InputLabelProps={{ shrink: true }}
+      {...props}
+    />
+  );
 };
