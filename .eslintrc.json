@@ -2,13 +2,9 @@
   "parser": "@typescript-eslint/parser",
   "overrides": [
     {
-      "files": [
-        "*.ts, *.tsx"
-      ],
+      "files": ["*.ts, *.tsx"],
       "parserOptions": {
-        "project": [
-          "**/tsconfig.json"
-        ]
+        "project": ["**/tsconfig.json"]
       }
     }
   ],
@@ -20,10 +16,7 @@
     "plugin:json/recommended-with-comments",
     "plugin:storybook/recommended"
   ],
-  "plugins": [
-    "react",
-    "@typescript-eslint"
-  ],
+  "plugins": ["react", "@typescript-eslint"],
   "settings": {
     "react": {
       "version": "detect"
@@ -42,19 +35,13 @@
     "react/no-unknown-property": [
       "error",
       {
-        "ignore": [
-          "css"
-        ]
+        "ignore": ["css"]
       }
     ],
     "no-console": [
       "warn",
       {
-        "allow": [
-          "warn",
-          "error",
-          "info"
-        ]
+        "allow": ["warn", "error", "info"]
       }
     ],
     "@typescript-eslint/no-unused-vars": [

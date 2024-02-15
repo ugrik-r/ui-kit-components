@@ -1,1 +1,2 @@
-export type StyledButtonVariants = "primary" | "secondary" | "error";
+export type StyledButtonVariants = "primary" | "error";
+export type StyledButtonSize = "small" | "medium";

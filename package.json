@@ -12,7 +12,9 @@
     "build-patch": "rm -rf ./dist & npm version patch & rollup -c --bundleConfigAsCjs & npm publish",
     "build-minor": "rm -rf ./dist & npm version minor & rollup -c --bundleConfigAsCjs & npm publish",
     "build-major": "rm -rf ./dist & npm version major & rollup -c --bundleConfigAsCjs & npm publish",
-    "build": "rm -rf ./dist & rollup -c --bundleConfigAsCjs"
+    "build": "rm -rf ./dist & rollup -c --bundleConfigAsCjs",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "keywords": [],
   "author": "",
@@ -29,11 +31,22 @@
   },
   "license": "ISC",
   "devDependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
+    "@storybook/addon-essentials": "^7.6.15",
+    "@storybook/addon-interactions": "^7.6.15",
+    "@storybook/addon-links": "^7.6.15",
+    "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/blocks": "^7.6.15",
+    "@storybook/react": "^7.6.15",
+    "@storybook/react-webpack5": "^7.6.15",
+    "@storybook/test": "^7.6.15",
     "@types/react": "^18.2.53",
+    "@types/react-dom": "^18.2.19",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "eslint": "^8.56.0",
@@ -47,6 +60,7 @@
     "rollup": "^4.9.6",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "storybook": "^7.6.15",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {

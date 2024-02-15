@@ -1,17 +1,22 @@
-import React from "react";
 import { StyledButton, StyledButtonProps } from "./styled-button";
-import { Meta, StoryFn } from "@storybook/react";
+import { Meta } from "@storybook/react";
 
-export default {
+const meta: Meta<StyledButtonProps> = {
   title: "components/styled-button",
   component: StyledButton,
-} as Meta<StyledButtonProps>;
+  args: {
+    children: "Button Text",
+    variant: "primary",
+    contained: true,
+    size: "medium",
+  },
+};
 
-type StyledButtonStoriesProps = StyledButtonProps;
+export default meta;
 
-export const StyledButtonStoryTemplate: StoryFn<StyledButtonStoriesProps> = ({
+export const StyledButtonStoryTemplate = ({
   children,
   ...args
-}) => <StyledButton {...args}>{children}</StyledButton>;
+}: StyledButtonProps) => <StyledButton {...args}>{children}</StyledButton>;
 
 StyledButtonStoryTemplate.storyName = "Styled Button";
