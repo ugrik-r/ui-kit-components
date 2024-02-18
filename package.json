@@ -37,6 +37,7 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
+    "@rollup/plugin-url": "^8.0.2",
     "@storybook/addon-essentials": "^7.6.15",
     "@storybook/addon-interactions": "^7.6.15",
     "@storybook/addon-links": "^7.6.15",
@@ -45,6 +46,8 @@
     "@storybook/react": "^7.6.15",
     "@storybook/react-webpack5": "^7.6.15",
     "@storybook/test": "^7.6.15",
+    "@svgr/rollup": "^8.1.0",
+    "@svgr/webpack": "^8.1.0",
     "@types/react": "^18.2.53",
     "@types/react-dom": "^18.2.19",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
@@ -61,7 +64,8 @@
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "storybook": "^7.6.15",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "url-loader": "^4.1.1"
   },
   "peerDependencies": {
     "react": "^18.2.0",

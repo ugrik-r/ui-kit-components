@@ -1,11 +1,8 @@
-import type { StorybookConfig } from "@storybook/react-webpack5";
-
-const config: StorybookConfig = {
+const config = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
   ],
   framework: {
@@ -27,6 +24,22 @@ const config: StorybookConfig = {
   }),
   docs: {
     autodocs: "tag",
+  },
+  webpackFinal: (config) => {
+    config.resolve.modules = [...(config.resolve.modules || []), "./src"];
+    config.module.rules = [
+      ...(config.module.rules || []),
+      {
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        type: "javascript/auto",
+        use: [
+          { loader: "@svgr/webpack", options: { icon: true } },
+          "url-loader",
+        ],
+      },
+    ];
+    return config;
   },
 };
 export default config;
