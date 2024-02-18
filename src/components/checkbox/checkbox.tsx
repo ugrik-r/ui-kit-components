@@ -7,19 +7,42 @@ import {
 } from "@mui/material";
 import { CheckedIcon, DisabledCheckedIcon, UncheckedIcon } from "../icons";
 import { checkboxStyles } from "./checkbox.styles";
+import { ChangeEvent, useEffect, useState } from "react";
 
-export type CheckboxProps = { label?: string } & MUICheckboxProps;
+export type CheckboxProps = {
+  label?: string;
+  handleChange: (
+    event: ChangeEvent<HTMLInputElement>,
+    checked: boolean
+  ) => void;
+} & MUICheckboxProps;
 
 export const Checkbox = ({
   icon,
   checkedIcon,
   disabled,
   label,
+  onChange,
+  handleChange,
+  checked,
   ...props
 }: CheckboxProps) => {
+  const [isChecked, setIsChecked] = useState(checked);
+
+  useEffect(() => {
+    setIsChecked(checked);
+  }, [checked]);
+
+  const handleChangeCheckbox = (
+    event: ChangeEvent<HTMLInputElement>,
+    checked: boolean
+  ) => {
+    handleChange?.(event, checked);
+    setIsChecked(checked);
+  };
   return (
     <FormControlLabel
-      disabled
+      disabled={disabled}
       control={
         <MUICheckbox
           icon={
@@ -28,7 +51,8 @@ export const Checkbox = ({
             />
           }
           checkedIcon={disabled ? <DisabledCheckedIcon /> : <CheckedIcon />}
-          disabled
+          onChange={handleChangeCheckbox}
+          checked={isChecked}
           {...props}
         />
       }
